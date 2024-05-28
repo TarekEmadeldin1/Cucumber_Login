@@ -1,8 +1,10 @@
 Feature: Login Functionality
   Test Valid and Invalid login
 
-  Scenario Outline: InValid Login With InValid UserName and Valid Password
+   Background:
     Given user on login page
+
+  Scenario Outline: InValid Login With InValid UserName and Valid Password
     When user enter <User> and <Password>
     Then Logged in inSuccessfully
     Examples:
@@ -11,7 +13,6 @@ Feature: Login Functionality
 
 
   Scenario Outline: Valid Login
-    Given user on login page
     When user enter <User> and <Password>
     Then Logged in Successfully
     Examples:
